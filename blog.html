@@ -1,0 +1,24 @@
+---
+title: Blog
+---
+
+{% if site.posts.size > 0 %}
+
+  <h1>Latest Posts</h1>
+  {% for post in site.posts %}
+    {% assign current_year = post.date | date: '%Y' %}
+    {% if current_year != date %}
+      <h2 class="blog-post-year-h2">{{current_year}}</h2>
+    {% endif %}
+    {% assign date = current_year %}
+    <div class="blog-post-entry-item">
+      <span class="blog-post-entry-date">{{post.date | date: '%m-%d'}}</span>
+      <span class="blog-post-entry-text"><a href="{{ post.url }}">{{ post.title }}</a></span>
+    </div>
+  {% endfor %}
+
+{% else %}
+
+  <span>No blog posts at this time. Check back later.</span>
+
+{% endif %}

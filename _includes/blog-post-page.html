@@ -1,0 +1,18 @@
+<div class="post-page-wrapper">
+  {% assign older_post = page.previous %}
+  {% assign newer_post = page.next %}
+  {% if older_post or newer_post %}
+  <div class="foot-post-navi">
+    <div class="foot-post-navi-col foot-post-navi-col-1">
+      {% if newer_post %}
+        <p>Newer post: <a href="{{ newer_post.url }}">{{ newer_post.title }}</a></p>
+      {% endif %}
+    </div>
+    <div class="foot-post-navi-col foot-post-navi-col-2">
+      {% if older_post %}
+        <p>Older post: <a href="{{ older_post.url }}">{{ older_post.title }}</a></p>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+</div>

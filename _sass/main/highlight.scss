@@ -1,0 +1,218 @@
+/*
+The following light/dark theme styling are taken from the Pygments CSS themes.
+
+Credit: https://pygments-styles.org
+
+Note:
+  - Light: catppuccin-latte
+  - Dark: catppuccin-macchiato
+*/
+
+@use "sass:color";
+@use "config" as m;
+
+
+// Styling for both themes
+.highlight, .highlight-dark {
+    padding: 1rem;
+
+    pre {
+        margin: 0;
+        background: transparent;
+        font-family:
+            "JetBrains Mono",
+            "Fira Code",
+            "SFMono-Regular",
+            Consolas,
+            "Liberation Mono",
+            monospace;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        tab-size: 2;
+    }
+
+    code { background: transparent; }
+
+    & .code { padding: 0px 20px; }
+
+    // Line numbers column
+    & td[class='gutter gl'] {
+        color: m.$default-light-gray;
+    }
+
+    // Errors
+    .err { background: transparent; }
+
+    * { transition: all 1s ease-in-out; }
+
+    // Line numbers
+    .lineno, .gl {
+      user-select: none;
+    }
+
+    .lineno { text-align: right; }
+}
+
+
+
+
+// Light mode (catppuccin-macchiato)
+.highlight {
+  color: #4c4f69;
+
+  pre, code { color: #4c4f69; }
+
+  // Comments
+  .c, .ch, .cm, .cp, .cpf, .c1, .cs {
+    color: #8c8fa1; font-style: italic;
+  }
+
+  // Errors
+  .err { color: #d20f39; }
+
+  // Keywords
+  .k, .kc, .kd, .kn, .kp, .kr, .kt {
+    color: #8839ef;
+  }
+
+  // Names
+  .n  { color: #4c4f69; }
+  .na { color: #1e66f5; }
+  .nb { color: #179299; }
+  .nc { color: #df8e1d; }
+  .no { color: #ea76cb; }
+  .nd { color: #fe640b; }
+  .ni { color: #8839ef; }
+  .ne { color: #d20f39; }
+  .nf { color: #1e66f5; }
+  .nl { color: #179299; }
+  .nn { color: #df8e1d; }
+  .nt { color: #fe640b; }
+
+  .nv, .vc, .vg, .vi {
+    color: #4c4f69;
+  }
+
+  // Operators
+  .o, .ow { color: #04a5e5; }
+
+  // Punctuation
+  .p { color: #4c4f69; }
+
+  // Strings
+  .s, .sa, .sb, .sc, .dl, .sd, .s2, .sh, .si, .sx, .sr, .s1, .ss {
+    color: #40a02b;
+  }
+
+  // Numbers
+  .m, .mb, .mf, .mh, .mi, .mo {
+    color: #fe640b;
+  }
+
+  // Regex
+  .sr { color: #40a02b; }
+
+  // Symbols
+  .bp { color: #179299; }
+
+  // Output
+  .gd { color: #d20f39; background: #fce8ed; }
+  .gi { color: #40a02b; background: #e8f4e5; }
+  .ge { font-style: italic; }
+  .gs { font-weight: 700; }
+  .gh { color: #8839ef; font-weight: 700; }
+  .gu { color: #8c8fa1; }
+  .go { color: #7c7f93; }
+  .gp {color: #1e66f5; }
+  .gt { color: #d20f39; }
+
+  // Data types (YAML, JSON) and HTML
+  .nt, .na { color: #1e66f5; }
+  .nv { color: #4c4f69; }
+
+  // Line numbers
+  .lineno, .gl { color: #9ca0b0; }
+
+  // Selection
+  ::selection { color: #eff1f5; background: #7287fd; }
+}
+
+
+
+// Light mode (catppuccin-latte)
+.highlight-dark {
+  color: #cad3f5;
+
+  pre, code { color: #cad3f5; }
+
+  // Comments
+  .c, .ch, .cm, .cp, .cpf, .c1, .cs {
+    color: #6e738d; font-style: italic;
+  }
+
+  // Errors
+  .err { color: #ed8796; }
+
+  // Keywords
+  .k, .kc, .kd, .kn, .kp, .kr, .kt { color: #c6a0f6; }
+
+  // Names
+  .n  { color: #cad3f5; }
+  .na { color: #8aadf4; }
+  .nb { color: #8bd5ca; }
+  .nc { color: #eed49f; }
+  .no { color: #f5bde6; }
+  .nd { color: #f5a97f; }
+  .ni { color: #c6a0f6; }
+  .ne { color: #ed8796; }
+  .nf { color: #8aadf4; }
+  .nl { color: #8bd5ca; }
+  .nn { color: #eed49f; }
+  .nt { color: #f5a97f; }
+  .nv, .vc, .vg, .vi { color: #f4dbd6; }
+
+  // Operators
+  .o, .ow { color: #91d7e3; }
+
+  // Punctuation
+  .p { color: #cad3f5; }
+
+  // Strings
+  .s, .sa, .sb, .sc, .dl, .sd, .s2, .sh, .si, .sx, .sr, .s1, .ss {
+    color: #a6da95;
+  }
+
+  // Numbers
+  .m, .mb, .mf, .mh, .mi, .mo { color: #f5a97f; }
+
+  // Regex
+  .sr { color: #a6da95; }
+
+  // Symbols
+  .bp {
+    color: #8bd5ca;
+  }
+
+  // Output
+  .gd { color: #ed8796; background: #3b2d3a; }
+  .gi { color: #a6da95; background: #293a32; }
+  .ge { font-style: italic; }
+  .gs { font-weight: 700; }
+  .gh { color: #c6a0f6; font-weight: 700; }
+  .gu { color: #6e738d; }
+  .go { color: #8087a2; }
+  .gp { color: #8aadf4; }
+  .gt { color: #ed8796; }
+
+  // Data types (YAML, JSON) and HTML
+  .nt, .na { color: #8aadf4; }
+  .nv { color: #f4dbd6; }
+
+  // Line numbers
+  .lineno, .gl {
+    color: #5b6078;
+  }
+
+  // Selection
+  ::selection { color: #24273a; background: #c6a0f6; }
+}

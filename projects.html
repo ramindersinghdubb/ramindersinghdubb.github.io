@@ -1,0 +1,29 @@
+---
+title: Projects
+---
+<h1>Projects</h1>
+
+<div class="projects-grid">
+  {% assign sorted_projects = site.projects | sort: 'title' %}
+  {% for project in sorted_projects %}
+    
+    {% assign project_meta = site.data.projects | where: 'title', project.title | first %}
+    {% if project_meta %}
+      {% assign img_path = project_meta.image %}
+    {% else %}
+      {% assign img_path = "project_default.jpg" %}
+    {% endif %}
+    
+    <div class="projects-entry">
+      <a class="project-img" href="{{ project.url }}"><img src="{{ "/assets/images/" | append: img_path | relative_url }}"></a>
+      
+      <div class="projects-entry-info">
+        <div class="projects-entry-title"><a href="{{ project.url }}">{{ project.title }}</a></div>
+        <span class="projects-entry-description1">{{ project.content | strip_html | truncatewords: 35 }}</span>
+        <span class="projects-entry-description2">{{ project.content | strip_html | truncatewords: 20 }}</span>
+      </div>
+    
+    </div>
+
+  {% endfor %}
+</div>

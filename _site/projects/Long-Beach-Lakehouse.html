@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Long Beach Medallion Lakehouse</title>
+    <style>html{visibility: hidden;opacity:0;}</style> <!-- Bandaid for FOUC -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+  <body>
+
+    <header class="site-wrapper site-head-border">
+    <div class="site-head-wrapper">
+        <nav>
+            <!-- Light/Dark theme switch -->
+            <div class="navi-head-button-wrapper">
+                <button type="button" data-theme-toggle aria-label="Light theme">
+                    <svg
+    class="smiling-face"
+    id="smiling-face"
+    version="1.1"
+    id="Capa_1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px" y="0px"
+    viewBox="0 0 24 24"
+    style="enable-background:new 0 0 44 44;"
+    xml:space="preserve"
+    width="24"
+    height="24"
+>
+    <path d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12 -5.383 12 -12S18.617 0 12 0m4.091 6a1.909 1.909 0 1 1 0 3.818 1.909 1.909 0 0 1 0 -3.818m-8.727 0a1.909 1.909 0 1 1 0 3.818 1.909 1.909 0 0 1 0 -3.818M12 20.182c-3.609 0 -6.545 -2.936 -6.545 -6.545a0.545 0.545 0 0 1 1.091 0c0 3.008 2.447 5.455 5.455 5.455s5.455 -2.447 5.455 -5.455a0.545 0.545 0 0 1 1.091 0c0 3.609 -2.936 6.545 -6.545 6.545"/>
+</svg>
+
+                </button>
+            </div>
+
+            <!-- Div elements active for larger screens (> 800px) -->
+            <div class="navi-head-wrapper">
+            
+                <div class="page-head-navi-item">
+                <span>
+                    <a href="/" >
+                    Home
+                    </a>
+                </span>
+                </div>
+            
+                <div class="page-head-navi-item">
+                <span>
+                    <a href="/about.html" >
+                    About
+                    </a>
+                </span>
+                </div>
+            
+                <div class="page-head-navi-item">
+                <span>
+                    <a href="/blog.html" >
+                    Blog
+                    </a>
+                </span>
+                </div>
+            
+                <div class="page-head-navi-item">
+                <span>
+                    <a href="/projects.html" >
+                    Projects
+                    </a>
+                </span>
+                </div>
+            
+            </div>
+            
+            <!-- Div elements active for smaller screens (<= 800px) -->
+            <div class="navi-head-menu-wrapper">
+            <input type="checkbox" id="nav-menu-trigger" class="nav-menu-trigger" />
+            <label for="nav-menu-trigger">
+                <span class="menu-icon">
+                    <svg
+    class="navi-menu-icon"
+    id="navi-menu-icon"
+    width=100%
+    height=100%
+    viewBox="0 0 1.2 1.2"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path class="svg-menu-icon" d="M0.2 0.35A0.05 0.05 0 0 1 0.25 0.3h0.7a0.05 0.05 0 1 1 0 0.1H0.25A0.05 0.05 0 0 1 0.2 0.35m0 0.25A0.05 0.05 0 0 1 0.25 0.55h0.7a0.05 0.05 0 1 1 0 0.1H0.25A0.05 0.05 0 0 1 0.2 0.6m0 0.25A0.05 0.05 0 0 1 0.25 0.8h0.7a0.05 0.05 0 1 1 0 0.1H0.25A0.05 0.05 0 0 1 0.2 0.85"/>
+</svg>
+                </span>
+                <span class="menu-exit-icon">
+                    <svg 
+    class="navi-menu-exit-icon"
+    id="navi-menu-exit-icon"
+    width=100%
+    height=100%
+    viewBox="0 0 1.2 1.2"
+    id="cross"
+    data-name="Flat Color"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path  d="m0.67 0.6 0.315 -0.314a0.05 0.05 0 1 0 -0.071 -0.071L0.6 0.53 0.286 0.215a0.05 0.05 0 0 0 -0.071 0.071L0.53 0.6 0.215 0.914a0.05 0.05 0 0 0 0 0.071 0.05 0.05 0 0 0 0.071 0L0.6 0.67l0.314 0.315a0.05 0.05 0 0 0 0.071 0 0.05 0.05 0 0 0 0 -0.071Z"/>
+</svg>
+                </span>
+            </label>
+            <div class="navi-head-menu-dropdown">
+                
+                <span class="navi-head-menu-dropdown-item">
+                    <a href="/" >
+                    Home
+                    </a>
+                </span>
+                
+                <span class="navi-head-menu-dropdown-item">
+                    <a href="/about.html" >
+                    About
+                    </a>
+                </span>
+                
+                <span class="navi-head-menu-dropdown-item">
+                    <a href="/blog.html" >
+                    Blog
+                    </a>
+                </span>
+                
+                <span class="navi-head-menu-dropdown-item">
+                    <a href="/projects.html" >
+                    Projects
+                    </a>
+                </span>
+                
+            </div>
+        
+        </nav>
+    </div>
+</header>
+
+    <main class="site-wrapper">
+      <div class="site-content-wrapper">
+      <h1>Long Beach Medallion Lakehouse</h1>
+
+
+    <p>GitHub Repository: <a href="http://github.com/ramindersinghdubb/Long-Beach-Medallion-Lakehouse">http://github.com/ramindersinghdubb/Long-Beach-Medallion-Lakehouse</a></p>
+
+
+
+<br>
+
+<p>The Long Beach Medallion Lakehouse is a Databricks-native Lakehouse that utilizes the <a href="https://data.longbeach.gov/api-console/explore/v2.1/?flg=en-us">City of Long Beach’s REST API</a> in order to ingest data on various municipal services and administrative bodies into a medallion (bronze-silver-gold) architecture.</p>
+
+<p>A detailed step-by-step tutorial on set-up is listed in the project’s <a href="https://github.com/ramindersinghdubb/Long-Beach-Medallion-Lakehouse/blob/main/README.md"><code class="language-plaintext highlighter-rouge">README.md</code></a> file. <strong>Note that a Databricks account and an Amazon Web Services (AWS) account are needed!</strong> This project makes use of an AWS S3 bucket to manage Databricks Unity Catalog resources.</p>
+
+<p>Job orchestrations are conducted on a scheduled basis, with watermarking/timestamping to ensure incremental processing of incoming datum. As described in the <code class="language-plaintext highlighter-rouge">README.md</code> file,</p>
+
+<blockquote class="blockquote">
+This platform is based around the industry-standard medallion architecture approach to data warehousing, with:
+
+<ul>
+    <li>A stateful bronze layer for ingesting raw data from the APIs,</li>
+    <li>A stateless silver layer for de-duplication, enrichment, &amp; normalization, and</li>
+    <li>A stateless gold layer for production-ready analytics and downstream use-cases</li>
+</ul>
+
+...
+
+<br /><br />
+
+<i style="color:var(--color-fg-light);">What makes the bronze layer "stateful" here is a table that tracks each executed job's status and examines the latest date of date for which we have successfully extracted. By tracking incremental updates to the platform, we enable the subsequent job orchestrations to focus solely on new intake data (hence the incremental updates).</i>
+</blockquote>
+
+<p>How users wish to specify job orchestrations, including scheduling, the location of production/development catalogs, workspace location, and general settings, can be tabulated in the Declarative Automation Bundle located in the <a href="https://github.com/ramindersinghdubb/Long-Beach-Medallion-Lakehouse/blob/main/databricks.yml"><code class="language-plaintext highlighter-rouge">databricks.yml</code></a> file and its constituent components within the <a href="https://github.com/ramindersinghdubb/Long-Beach-Medallion-Lakehouse/tree/main/resources"><code class="language-plaintext highlighter-rouge">resources/</code></a> folder.</p>
+
+<p>In the illustration below, the job orchestration ingests the roughly 56,000 datum from the API endpoint corresponding to the <a href="https://data.longbeach.gov/explore/assets/animal-shelter-intakes-and-outcomes/">Long Beach Animal Shelter</a>, which conducts intakes and outgoing assessment of household pets, stray animals, and wildlife. Note that the bronze-layer queries (HTTP GET requests) are ingested via the Python software development kit (SDK) while data validation takes place with the Databricks pipeline update. As bronze layer data is handled via the SDK, the two layers below illustrate the silver and gold layers respectively.</p>
+
+<figure class="general-fig">
+    <img src="/assets/images/project_LB-Lakehouse.png" alt="Example: Long Beach Animal Shelter Endpoint" />
+    <figcaption>Example: Pipeline update for Long Beach Animal Shelter Endpoint</figcaption>
+</figure>
+
+
+
+      
+      </div>
+    </main>
+
+    <script src="/assets/js/update-theme.js"></script>
+<style>html { visibility: visible; opacity: 1; }</style> <!-- Bandaid for FOUC -->
+
+<footer class="site-wrapper">
+
+    <div class="site-foot-wrapper">
+        
+        <div class="site-foot-cols-wrapper">
+
+            <div class="site-foot-col site-foot-col1">
+                <p>
+                    
+                        <span class="site-foot-author-name">Raminder Singh</span>
+                    
+                    <span class="site-current-year">© 2026</span>
+                </p>
+                
+            </div>
+            <div class="site-foot-col site-foot-col2">
+                <div class="social-div"><span>GitHub: <a href="https://github.com/ramindersinghdubb">ramindersinghdubb</a></span></div>
+<div class="social-div"><span>LinkedIn: <a href="https://www.linkedin.com/in/raminder-singh-dubb">raminder-singh-dubb</a></span></div>
+            </div>
+        
+        </div>
+
+        
+        <div class="site-foot-row">
+            <p>A personal website.</p>
+        </div>
+        
+
+    </div>
+
+</footer>
+
+  </body>
+
+</html>

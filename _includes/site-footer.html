@@ -1,0 +1,37 @@
+<script src="{{ "/assets/js/update-theme.js" | relative_url }}"></script>
+<style>html { visibility: visible; opacity: 1; }</style> <!-- Bandaid for FOUC -->
+
+<footer class="site-wrapper">
+
+    <div class="site-foot-wrapper">
+        
+        <div class="site-foot-cols-wrapper">
+
+            <div class="site-foot-col site-foot-col1">
+                <p>
+                    {% if site.author %}
+                        <span class="site-foot-author-name">{{ site.author | escape }}</span>
+                    {% endif %}
+                    <span class="site-current-year">© {{ site.time | date: '%Y'}}</span>
+                </p>
+                {% if site.email %}
+                    <p class="site-foot-email">
+                        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                    </p>
+                {% endif %}
+            </div>
+            <div class="site-foot-col site-foot-col2">
+                {% include socials.html %}
+            </div>
+        
+        </div>
+
+        {% if site.description %}
+        <div class="site-foot-row">
+            <p>{{ site.description }}</p>
+        </div>
+        {% endif %}
+
+    </div>
+
+</footer>

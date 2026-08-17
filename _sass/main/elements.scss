@@ -1,0 +1,254 @@
+/*
+The following light/dark theme styling are taken from the Pygments CSS themes.
+
+Credit: https://pygments-styles.org
+
+Note:
+  - Light: catppuccin-latte
+  - Dark: catppuccin-macchiato
+*/
+
+@use "sass:color";
+@use "config" as m;
+
+
+@import url('https://fonts.googleapis.com/css?family=Spectral|Varela');
+
+[data-theme="light"] {
+   --color-bg: #F0F1F5;
+   --color-fg: #595A6C;
+   --color-fg-light: #87889C;
+   --color-fg-contrast:dodgerblue;
+   --selection-color-fg: #EFF1F5;
+   --selection-color-bg: #7287FD;
+   --svg-rotation: 0deg;
+   --hover-illumina-factor: 0.7;
+}
+
+[data-theme="dark"] {
+   --color-bg: #25273A;
+   --color-fg: #BFC8EA;
+   --color-fg-light: #97a0c1;
+   --color-fg-contrast: #C099f4;
+   --selection-color-fg: #24273A;
+   --selection-color-bg: #C6A0F6;
+   --svg-rotation: 180deg;
+   --hover-illumina-factor: 1.2;
+}
+
+
+
+:root {
+    height: 100%;
+    width: 100%;
+    transition:
+        color 1s ease-in-out,
+        background-color 1s ease-in-out;
+    
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Varela';
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    transition:
+        color 1s ease-in-out,
+        background-color 1s ease-in-out;
+        
+    * {
+        transition:
+            color 1s ease-in-out,
+            background-color 1s ease-in-out;
+    }
+
+    ::selection {
+        color: var(--selection-color-fg);
+        background: var(--selection-color-bg);
+    }
+}
+
+
+h1 {
+    font-family: 'Spectral';
+
+    & .author-position {
+        font-size: 60%;
+    }
+}
+
+h2 {
+    & .author-position {
+        font-size: 60%;
+    }
+}
+
+span, p, a {
+    color: var(--color-fg);
+    transition: color 1s ease-in-out;
+    hyphens: auto;
+
+    * {
+        color: var(--color-fg);
+        transition: color 1s ease-in-out;
+    }
+}
+
+p {
+    & code {
+        font-family:
+            "JetBrains Mono",
+            "Fira Code",
+            "SFMono-Regular",
+            Consolas,
+            "Liberation Mono",
+            monospace;
+    }
+}
+
+a:hover {
+    filter: brightness(var(--hover-illumina-factor));
+}
+
+img {
+    user-select: none;
+}
+
+// Necessary class for re-loading/perusing pages across the site w/o FOUC
+.preload {
+    background: var(--color-bg) !important;
+
+    -webkit-transition: none !important;
+    -moz-transition:    none !important;
+    -ms-transition:     none !important;
+    -o-transition:      none !important;
+    transition:         none !important;
+
+    * {
+        -webkit-transition: none !important;
+        -moz-transition:    none !important;
+        -ms-transition:     none !important;
+        -o-transition:      none !important;
+        transition:         none !important;
+    }
+}
+
+
+
+.archive-img {
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+
+// Smiling face
+.smiling-face {
+    margin-top: m.$default-spacing-unit;
+    transform:         rotate(var(--svg-rotation));
+    -webkit-transform: rotate(var(--svg-rotation));
+    transition: transform 1s ease-in-out 1s;
+
+    & path {
+        fill: var(--color-fg);
+        transition: fill 1s ease-in-out;
+    }
+}
+
+// SVG menu icons
+.navi-menu-icon, .navi-menu-exit-icon {
+    & path {
+        fill: var(--color-fg);
+        transition: fill 1s ease-in-out;
+    }
+}
+
+// Highlight code chunks
+.highlight, .highlight-dark {
+    scrollbar-color: var(--color-fg) var(--color-bg);
+
+    > pre {
+        padding: 10px 10px;
+        border: 1px solid var(--color-fg);
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+}
+
+
+// Affect the display of the current navigation tab
+.current-navi-tab {
+    color: var(--color-fg-contrast);
+    font-weight: bold;
+}
+
+
+// Navi bar
+.navi-head-menu-dropdown, label[for="nav-menu-trigger"] {
+    border: 1.5px solid m.$default-light-gray;
+    border-radius: 4px;
+}
+
+.navi-head-menu-dropdown {
+    background-color: hsl(from var(--color-bg) h s calc(l + 5));
+    z-index: 2;
+}
+
+label[for="nav-menu-trigger"] {
+    transition: border 1s ease-in-out;
+}
+
+label[for="nav-menu-trigger"]:hover,
+.page-head-navi-item:hover,
+.navi-head-menu-dropdown-item:hover {
+    filter: brightness(var(--hover-illumina-factor));
+}
+
+
+// Block quotes
+.blog-quote, .blockquote {
+    border-left: solid var(--color-fg);
+    padding-left: -webkit-calc(#{m.$default-spacing-unit} / 2);
+    padding-left:         calc(#{m.$default-spacing-unit} / 2);
+}
+
+.blog-quote {
+    font-family:
+        "JetBrains Mono",
+        "Fira Code",
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+}
+
+.blockquote {
+    ul {
+        padding-inline-start: 30px;
+    }
+}
+
+
+// Images
+.general-fig {
+    display: block;
+    justify-content: center;
+    margin-top: 5px;
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        display: block;
+        justify-content: center;
+    }
+
+    figcaption {
+        color: var(--color-fg-light);
+        font-style: italic;
+        text-align: center;
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,47 @@
+<header class="site-wrapper site-head-border">
+    <div class="site-head-wrapper">
+        <nav>
+            <!-- Light/Dark theme switch -->
+            <div class="navi-head-button-wrapper">
+                <button type="button" data-theme-toggle aria-label="Light theme">
+                    {% include svg-smiling-face.html %}
+                </button>
+            </div>
+
+            <!-- Div elements active for larger screens (> 800px) -->
+            <div class="navi-head-wrapper">
+            {% for item in site.data.navigation %}
+                <div class="page-head-navi-item">
+                <span>
+                    <a href="{{ item.link }}" {% if page.url == item.link %} class="current-navi-tab" {% endif %}>
+                    {{ item.name }}
+                    </a>
+                </span>
+                </div>
+            {% endfor %}
+            </div>
+            
+            <!-- Div elements active for smaller screens (<= 800px) -->
+            <div class="navi-head-menu-wrapper">
+            <input type="checkbox" id="nav-menu-trigger" class="nav-menu-trigger" />
+            <label for="nav-menu-trigger">
+                <span class="menu-icon">
+                    {% include svg-menu.html %}
+                </span>
+                <span class="menu-exit-icon">
+                    {% include svg-menu-exit.html %}
+                </span>
+            </label>
+            <div class="navi-head-menu-dropdown">
+                {% for item in site.data.navigation %}
+                <span class="navi-head-menu-dropdown-item">
+                    <a href="{{ item.link }}" {% if page.url == item.link %} class="current-navi-tab" {% endif %}>
+                    {{ item.name }}
+                    </a>
+                </span>
+                {% endfor %}
+            </div>
+        
+        </nav>
+    </div>
+</header>

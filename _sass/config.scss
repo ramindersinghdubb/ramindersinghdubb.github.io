@@ -1,0 +1,43 @@
+/*
+CONFIGURATION FILE
+
+Customize any of the following variables here.
+*/
+
+@charset "utf-8";
+@use "sass:color";
+
+
+// Default sizes
+$base-font-size: 14px !default;
+
+
+// Default colors
+$default-gray: #4E4B51 !default;
+$default-dark-gray: color.adjust($default-gray, $lightness: -40%) !default;
+$default-light-gray: color.adjust($default-gray, $lightness: 40%) !default;
+
+
+// Default spacing units
+$site-width: 85% !default;
+$default-spacing-unit: 30px !default;
+$default-separation-unit: 100px !default;
+$default-navi-height: 40px !default;
+
+
+// Width of the content area (credit: Minima stylesheets)
+$content-width: 800px !default;
+$on-laptop:     800px !default;
+$on-palm:       600px !default;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}

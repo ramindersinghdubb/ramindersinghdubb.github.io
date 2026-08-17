@@ -1,0 +1,15 @@
+---
+layout: default
+excerpt_separator: <!--more-->
+---
+<h1>{{ page.title }}</h1>
+
+<p>
+  {{ page.date | date_to_string }}
+</p>
+
+<br>
+
+{{ content }}
+
+{% include blog-post-page.html %}
