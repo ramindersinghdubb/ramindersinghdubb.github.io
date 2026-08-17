@@ -5,6 +5,7 @@
 .site-wrapper {
     width: m.$site-width;
     justify-self: center;
+    margin-inline: auto;
 }
 
 .site-head-wrapper {
@@ -83,6 +84,7 @@
         background: transparent;
         border: transparent;
         padding-inline: 0;
+        min-width: m.$default-navi-height;
 
         svg {
             width: 80%;
